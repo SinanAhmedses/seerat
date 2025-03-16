@@ -1,7 +1,7 @@
 import "bootstrap/dist/js/bootstrap.bundle.min"; // Import Bootstrap JS
 import "./App.css"; // Your custom CSS
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./Components/Home";
 import About from "./Components/About";

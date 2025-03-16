@@ -13,6 +13,7 @@ export default function Home() {
 
   return (
     <>
+      <title>Seerat Public School | Home</title>
       {/* Header */}
       <header>
         <nav className="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
