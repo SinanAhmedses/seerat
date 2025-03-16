@@ -1,38 +1,182 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero {
+  position: relative;
+  background: url("./ses.png") no-repeat center center/cover;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0 15px;
+  /* Add space on both sides */
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,
+      0,
+      0,
+      0.5);
+  /* Add a dark overlay for better text visibility */
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-content {
+  position: relative;
+  z-index: 2;
+  /* Bring content above the overlay */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.hero a {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background: #0d6efd;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero a:hover {
+  background: #004085;
+}
+
+
+li a:hover {
+  text-decoration: underline;
+}
+.main {
+  background: url("./Second.png") no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+.main h1 {
+  font-size: 4rem;
+  font-weight: medium;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.main p {
+  font-size: 1.2rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Glassmorphism Cards */
+.team-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+.team-card img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 5px solid white;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+.teacher-card {
+  background-color: #2d2d2d !important; /* Ensures dark background */
+  color: #fff !important;
+  border: none !important;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  border-left: 5px solid #d4af37; /* Golden border on the left */
+}
+.teacher-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+.social-icons a {
+  color: #d4af37;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #b8922c;
+}
+.contact-section {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+.contact-info i {
+  font-size: 24px;
+  color: #d4af37; /* Golden */
+ 
+}
+.contact-info p {
+  margin-bottom: 10px;
+
+}
+.form-control {
+  border-radius: 5px;
+}
+.btn-custom {
+  background-color: #d4af37 !important; 
+  color: #1e1e1e !important;
+  font-weight: bold;
+  border-radius: 5px !important;
+
+}
+.btn-custom:hover {
+  background-color: #b8922c;
+  color: white;
+  
 }
