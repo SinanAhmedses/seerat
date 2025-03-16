@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css"; // Font Awesome
 import AOS from "aos"; // AOS Animation
 import "aos/dist/aos.css"; // AOS Styles
 import "../App.css"; // Your custom styles
+import { Link } from "react-router-dom";
 
 export default function Home() {
   useEffect(() => {
@@ -18,13 +19,13 @@ export default function Home() {
       <header>
         <nav className="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
           <div className="container-fluid">
-            <a
+            <Link
               className="navbar-brand"
-              href="/"
+              to="/"
               style={{ fontSize: "xx-large" }}
             >
               Seerat Public <span style={{ color: "#1E3A8A" }}>School</span>
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -42,28 +43,24 @@ export default function Home() {
             >
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0 text-center fs-5">
                 <li className="nav-item">
-                  <a
-                    className="nav-link active"
-                    aria-current="page"
-                    href="/About"
-                  >
+                  <Link className="nav-link active" to="/About">
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/Gallery">
+                  <Link className="nav-link" to="/Gallery">
                     Gallery
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/Faculty">
+                  <Link className="nav-link" to="/Faculty">
                     Faculty
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/Contact">
+                  <Link className="nav-link" to="/Contact">
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -132,9 +129,9 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="/Contact" className="text-decoration-none">
+                  <Link to="/Contact" className="text-decoration-none">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
